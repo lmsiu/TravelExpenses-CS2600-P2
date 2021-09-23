@@ -3,7 +3,7 @@
 
 double getCarRentalFees(){
     double carRentalFees;
-    printf("How much were car rental fees (if none enter 0.0) in dollar.cents format (if rental fees were $50.99, enter 50.99)\n");
+    printf("If you rented a car, how much were car rental fees (if none enter 0.0) in dollar.cents format (if rental fees were $50.99, enter 50.99)\n");
     scanf("%lf", &carRentalFees);
 
     carRentalFees = checkIfNegative(carRentalFees);
@@ -28,11 +28,24 @@ double getConfrenceandSeminarFees(){
 }
 
 double getParkingFees(){
+    
+
+    
 
 }
 
-double getMilesDriven(){
+double getMilesDrivenCompensation(){
+    double miles;
+    double milesComp;
 
+    printf("If you used a private vehical, how many miles did you drive (Enter 0.0 if a private vehical was not used)\n");
+    scanf("%lf", &miles);
+
+    miles = checkIfNegative(miles);
+
+    milesComp = miles * 0.27;
+
+    return milesComp;
 }
 
 double getHotelExpenses(){

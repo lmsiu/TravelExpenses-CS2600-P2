@@ -5,7 +5,7 @@
 double getCarRentalFees();
 double getConfrenceandSeminarFees();
 double getParkingFees();
-double getMilesDriven();
+double getMilesDrivenCompensation();
 double getHotelExpenses();
 
 double getBreakfastAmount();
