@@ -2,7 +2,7 @@
 
 //Please change/update as needed
 #define HEADER
-double getCarRentalFees(double carRentalFees);
+double getCarRentalFees();
 double getConfrenceFees();
 double getParkingFees();
 double getMilesDriven();

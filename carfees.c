@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include "header.h"
 
-double getCarRentalFees(double carRentalFees){
+double getCarRentalFees(){
+    double carRentalFees;
     printf("How much were car rental fees (if none enter 0.0) in dollar.cents format (if rental fees were $50.99, enter 50.99)\n");
     scanf("%lf", &carRentalFees);
 
