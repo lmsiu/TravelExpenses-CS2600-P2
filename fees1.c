@@ -27,11 +27,34 @@ double getConfrenceandSeminarFees(){
 
 }
 
-double getParkingFees(){
-    
+double getParkingFees(double tripLength, int expensesORcomp){
+    double parkingFees;
+    double feesCovered;
+    double remainingFees;
+    //if expensesORcomp = 1, return how much the user owes for parking/saved on parking (if value is positive, the owe, if negative, the saved)
+    //if expensesORcomp = 0, return allowable expenses for parking from company
+    //if expensesORcomp = anything other than 0 or 1, return total parking fees incured by user
 
-    
+    printf("How much did you spend on parking fees in total? Please note you will only be compensated $6.00 per day. (Enter 0.0 if none)\n");
+    scanf("%lf", &parkingFees);
 
+    parkingFees = checkIfNegative(parkingFees);
+
+    feesCovered = 6.0 * tripLength;
+
+
+    remainingFees = parkingFees - feesCovered; //if this value is negative, it's how much the user SAVED 
+
+    if(expensesORcomp == 1){
+        return remainingFees; //if remaining fees is negative, it's the amount they saved
+    } else if(expensesORcomp == 0){
+        return feesCovered; 
+    }
+    
+    return parkingFees;
+
+    //NOTE: tripLength should not be negative. This should be handled in main() already as the value passed in will be from getDaysonTrip which cannot return a value less than 1
+    
 }
 
 double getMilesDrivenCompensation(){
