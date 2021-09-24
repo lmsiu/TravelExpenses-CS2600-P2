@@ -27,7 +27,7 @@ double getConfrenceandSeminarFees(){
 
 }
 
-double getParkingFees(double tripLength, int expensesORcomp){
+double getParkingFees(int tripLength, int expensesORcomp){
     double parkingFees;
     double feesCovered;
     double remainingFees;
