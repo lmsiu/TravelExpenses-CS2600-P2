@@ -4,9 +4,11 @@
 #define HEADER
 double getCarRentalFees();
 double getConfrenceandSeminarFees();
-double getParkingFees(int tripLength, int expensesORcomp);
+double getParkingFees(int tripLength);
+double getParkingFeesCovered(int tripLength);
 double getMilesDrivenCompensation();
-double getHotelExpenses();
+double getHotelExpenses(int tripLength);
+double getHotelExpensesCovered(int tripLength);
 
 double getBreakfastAmount();
 double getLunchAmount();
