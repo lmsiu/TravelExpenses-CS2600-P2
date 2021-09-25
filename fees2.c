@@ -50,5 +50,5 @@ double getDinnerAmount(int days, int arr, int dep) {
         daysAllowed -= 1;
     }
 
-    return daysAllowed * 9;
+    return daysAllowed * 16;
 }
