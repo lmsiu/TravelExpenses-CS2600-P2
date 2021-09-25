@@ -53,12 +53,7 @@ double getDinnerAmount(int days, int arr, int dep) {
     return daysAllowed * 16;
 }
 
-double getRoundTripCost() {
-    double tripCost;
-
-    printf("How much did the roundtrip cost (Ex: 0.0, 25.99, etc.): ");
-    scanf("%lf", &tripCost);
-
+double getRoundTripCost(double tripCost) {
     while ((getchar()) != '\n'); // Clear input buffer
 
     tripCost = checkIfNegative(tripCost);

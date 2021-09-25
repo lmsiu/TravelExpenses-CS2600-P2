@@ -2,12 +2,18 @@
 
 //Please change/update as needed
 #define HEADER
+int tripLength;
+int arrival_time;
+int departure_time;
+
 double getCarRentalFees();
 double getConfrenceandSeminarFees();
-double getParkingFees(int tripLength);
+double getParkingFees(int tripLength, double parkingFees);
 double getParkingFeesCovered(int tripLength);
+double getTaxiFees(int tripLength, double taxiFees);
+double getTaxiFeesCovered(int tripLength);
 double getMilesDrivenCompensation();
-double getHotelExpenses(int tripLength);
+double getHotelExpenses(int tripLength, double hotelExpenses);
 double getHotelExpensesCovered(int tripLength);
 
 double getTotalMealCost();
