@@ -10,6 +10,7 @@ double getMilesDrivenCompensation();
 double getHotelExpenses(int tripLength);
 double getHotelExpensesCovered(int tripLength);
 
+double getTotalMealCost();
 double getBreakfastAmount();
 double getLunchAmount();
 double getDinnerAmount();
