@@ -11,3 +11,15 @@ double getTotalMealCost() {
     cost = checkIfNegative(cost);
     return cost;
 }
+
+double getBreakfastAmount(int days, int arr, int dep) {
+
+}
+
+double getLunchAmount(int days, int arr, int dep) {
+
+}
+
+double getDinnerAmount(int days, int arr, int dep) {
+
+}

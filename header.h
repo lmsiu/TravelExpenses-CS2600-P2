@@ -11,9 +11,9 @@ double getHotelExpenses(int tripLength);
 double getHotelExpensesCovered(int tripLength);
 
 double getTotalMealCost();
-double getBreakfastAmount();
-double getLunchAmount();
-double getDinnerAmount();
+double getBreakfastAmount(int days, int arr, int dep);
+double getLunchAmount(int days, int arr, int dep);
+double getDinnerAmount(int days, int arr, int dep);
 double getRoundTripCost();
 
 double checkIfNegative(double value); 
