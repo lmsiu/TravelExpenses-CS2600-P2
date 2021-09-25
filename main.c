@@ -18,6 +18,13 @@ int getDepartureTime(){
 }
 
 int main(){
+
+    double mcost = getTotalMealCost();
+    printf("mcost: %lf\n", mcost);
+
+    double rcost = getRoundTripCost();
+    printf("rcost: %lf\n", rcost);
+
     printf("How many days for this trip? ");
     scanf("%d", &trip_days);
     while ((getchar()) != '\n'); // Clear input buffer
@@ -36,6 +43,6 @@ int main(){
     printf("Breakfast expenses: %f\n", breakExpense);
 
     printf("Total days of your trip is %d. Arrival time is %d, departure time is %d.", getDaysonTrip(), getArrivalTime(), getDepartureTime());
-    
+
     return 0;
 }

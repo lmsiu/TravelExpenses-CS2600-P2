@@ -5,8 +5,8 @@
 double getTotalMealCost() {
     double cost;
 
-    printf("How much did you spend on meals in total?\n (Ex: 0.0, 25.99, etc.): ");
-    scanf("%f", &cost);
+    printf("How much did you spend on meals in total? (Ex: 0.0, 25.99, etc.): ");
+    scanf("%lf", &cost);
 
     while ((getchar()) != '\n'); // Clear input buffer
 
@@ -51,4 +51,16 @@ double getDinnerAmount(int days, int arr, int dep) {
     }
 
     return daysAllowed * 16;
+}
+
+double getRoundTripCost() {
+    double tripCost;
+
+    printf("How much did the roundtrip cost (Ex: 0.0, 25.99, etc.): ");
+    scanf("%lf", &tripCost);
+
+    while ((getchar()) != '\n'); // Clear input buffer
+
+    tripCost = checkIfNegative(tripCost);
+    return tripCost;
 }
