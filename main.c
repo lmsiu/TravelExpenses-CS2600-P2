@@ -40,7 +40,7 @@ int main(){
     double mealCost = getTotalMealCost();
     double breakExpense = getBreakfastAmount(trip_days, arrival_time, departure_time);
 
-    printf("Breakfast expenses: %f\n", breakExpense);
+    printf("Breakfast expenses: %lf\n", breakExpense);
 
     printf("Total days of your trip is %d. Arrival time is %d, departure time is %d.", getDaysonTrip(), getArrivalTime(), getDepartureTime());
 
