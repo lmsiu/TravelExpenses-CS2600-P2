@@ -6,14 +6,25 @@ double getTotalMealCost() {
     double cost;
 
     printf("How much did you spend on meals in total?\n (Ex: 0.0, 25.99, etc.): ");
-    scanf("%f", cost);
+    scanf("%f", &cost);
+
+    while ((getchar()) != '\n'); // Clear input buffer
 
     cost = checkIfNegative(cost);
     return cost;
 }
 
 double getBreakfastAmount(int days, int arr, int dep) {
+    int daysAllowed = days;
+    
+    if (dep >= 700) {
+        daysAllowed -= 1;
+    }
+    if ((days > 1) && (arr < 800)){
+        daysAllowed -= 1;
+    }
 
+    return daysAllowed * 9;
 }
 
 double getLunchAmount(int days, int arr, int dep) {

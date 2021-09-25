@@ -89,6 +89,7 @@ double checkIfNegative(double value){
     while(value < 0.0){
         printf("Amount can not be less than 0. Please enter 0.0 if there were no fees of this type\n");
         scanf("%lf", &value);
+        while ((getchar()) != '\n'); // Clear input buffer
     }
 
     return value;
