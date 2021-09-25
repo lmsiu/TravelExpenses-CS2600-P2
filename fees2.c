@@ -28,7 +28,16 @@ double getBreakfastAmount(int days, int arr, int dep) {
 }
 
 double getLunchAmount(int days, int arr, int dep) {
+    int daysAllowed = days;
+    
+    if (dep >= 1200) {
+        daysAllowed -= 1;
+    }
+    if ((days > 1) && (arr < 1300)){
+        daysAllowed -= 1;
+    }
 
+    return daysAllowed * 12;
 }
 
 double getDinnerAmount(int days, int arr, int dep) {
