@@ -2,51 +2,45 @@
 #include <stdio.h>
 #include "header.h"
 
-double getTotalMealCost() {
-    double cost;
-
-    printf("How much did you spend on meals in total? (Ex: 0.0, 25.99, etc.): ");
-    scanf("%lf", &cost);
-
+double getTotalMealCost(double mealCost) {
     while ((getchar()) != '\n'); // Clear input buffer
-
-    cost = checkIfNegative(cost);
-    return cost;
+    checkIfNegative(mealCost);
+    return mealCost;
 }
 
-double getBreakfastAmount(int days, int arr, int dep) {
-    int daysAllowed = days;
+double getBreakfastAmount(int tripLength, int arrival_time, int departure_time) {
+    int daysAllowed = tripLength;
     
-    if (dep >= 700) {
+    if (departure_time >= 700) {
         daysAllowed -= 1;
     }
-    if ((days > 1) && (arr < 800)){
+    if ((tripLength > 1) && (arrival_time < 800)){
         daysAllowed -= 1;
     }
 
     return daysAllowed * 9;
 }
 
-double getLunchAmount(int days, int arr, int dep) {
-    int daysAllowed = days;
+double getLunchAmount(int tripLength, int arrival_time, int departure_time) {
+    int daysAllowed = tripLength;
     
-    if (dep >= 1200) {
+    if (departure_time >= 1200) {
         daysAllowed -= 1;
     }
-    if ((days > 1) && (arr < 1300)){
+    if ((tripLength > 1) && (arrival_time < 1300)){
         daysAllowed -= 1;
     }
 
     return daysAllowed * 12;
 }
 
-double getDinnerAmount(int days, int arr, int dep) {
-    int daysAllowed = days;
+double getDinnerAmount(int tripLength, int arrival_time, int departure_time) {
+    int daysAllowed = tripLength;
     
-    if (dep >= 1800) {
+    if (departure_time >= 1800) {
         daysAllowed -= 1;
     }
-    if ((days > 1) && (arr < 1900)){
+    if ((tripLength > 1) && (arrival_time < 1900)){
         daysAllowed -= 1;
     }
 
@@ -55,7 +49,22 @@ double getDinnerAmount(int days, int arr, int dep) {
 
 double getRoundTripCost(double tripCost) {
     while ((getchar()) != '\n'); // Clear input buffer
-
-    tripCost = checkIfNegative(tripCost);
+    checkIfNegative(tripCost);
     return tripCost;
+}
+
+//display function
+void mealFeeDisplay(double mealFees_extra) {
+    if (mealFees_extra < 0) {
+        mealFees_extra = 0 - mealFees_extra;
+        printf("Employee has to pay %.2f extra on meal.\n", mealFees_extra);
+    }
+
+    else if (mealFees_extra = 0) {
+        printf("Employee used the exactly max meal fees %.2f.\n", mealFees_extra);
+    }
+
+    else {
+        printf("Employee saved %.2f on meal.\n", mealFees_extra);
+    }
 }
